@@ -1,0 +1,382 @@
+/* =========================
+   Intro Layout
+========================= */
+body.intro{
+    margin:0;
+    background:#fff;
+    font-family:'Pretendard','Noto Sans KR',sans-serif;
+    color:#222;
+    }
+    
+    .intro-container{
+        width:100%;
+        padding:35px 48px 20px;
+        box-sizing:border-box;
+        }
+    
+    .intro-layout{
+        display:grid;
+        grid-template-columns:24% 52% 22%;
+        gap:28px;
+        align-items:stretch;
+        }
+    .ipsi{
+    min-width:0;
+    }
+    
+    .youtu{
+    min-width:0;
+    }
+    
+    .qmenu{
+    min-width:0;
+    }
+
+/* =========================
+   Header
+========================= */
+
+.main-top{height:100px;background:#fff;box-shadow:0 5px 20px rgba(0,0,0,.05);}
+.header-inner{max-width:1700px;height:100%;padding:0 40px;display:flex;align-items:center;}
+.logo{margin:0;}
+.logo img{height:47px;display:block;}
+#gnb{margin-left:16%;}
+#gnb ul{display:flex;align-items:center;gap:60px;margin:0;padding:0;list-style:none;}
+#gnb li{margin:0;padding:0;}
+#gnb a{position:relative;color:#333;font-size:20px;font-weight:600;text-decoration:none;transition:.25s;}
+#gnb a:hover{color:#005BAC;}
+#gnb a::after{content:"";position:absolute;left:0;bottom:-8px;width:0;height:2px;background:#005BAC;transition:.3s;}
+#gnb a:hover::after{width:100%;}
+
+/* =========================
+   Admission Card
+========================= */
+
+.admission-box{
+    background:#071B4D;
+    border-radius:24px;
+    padding:42px;
+    min-height:610px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+    text-align: center;
+}
+
+.admission-box h2{
+    margin:0;
+    font-size:40px;
+    line-height:1.2;
+}
+
+.admission-date{
+    margin:18px 0;
+}
+
+.admission-date strong{
+    display:block;
+    color:#39B4FF;
+    font-size:28px;
+    margin-bottom:5px;
+}
+
+.admission-date span{
+    color:#fff;
+    font-size:20px;
+}
+
+.btn-intro{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:60px;
+    border:2px solid #FFC93C;
+    border-radius:50px;
+    color:#FFC93C;
+    font-size:22px;
+    font-weight:700;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn-intro:hover{
+    background:#FFC93C;
+    color:#071B4D;
+    text-decoration:none;
+}
+
+.admission-box::after{
+    content:"";
+    position:absolute;
+    right:-40px;
+    bottom:-40px;
+    width:240px;
+    height:240px;
+    background:url("/ktc/ktc-mark-light.png") center/contain no-repeat;
+    opacity:.05;
+}
+
+/* =========================
+   Video
+========================= */
+.video-box{
+    position:relative;
+    height:100%;
+    min-height:610px;
+    border-radius:24px;
+    overflow:hidden;
+    background:#000;
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+    }
+    
+    .video-box iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border:0;
+    }
+
+/* =========================
+   Quick Menu
+========================= */
+
+.quick-box{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.quick-item{
+    position:relative;
+    display:flex;
+    align-items:center;
+    height:140px;
+    padding:0 28px;
+    border-radius:22px;
+    color:#fff;
+    text-decoration:none;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+    transition:.25s;
+}
+
+.quick-item:hover{
+    transform:translateY(-5px);
+    color:#fff;
+    text-decoration:none;
+}
+
+.quick-icon{
+    width:70px;
+    height:70px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-right:18px;
+}
+
+.quick-icon img{
+    width:56px;
+}
+
+.quick-content{
+    flex:1;
+}
+
+.quick-content strong{
+    display:block;
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:5px;
+}
+
+.quick-content span{
+    font-size:15px;
+    opacity:.9;
+}
+
+.quick-arrow{
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    background:rgba(255,255,255,.2);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:26px;
+    transition:.3s;
+    font-weight: bold;
+}
+
+.quick-item:hover .quick-arrow{
+    background:#fff;
+    color:#333;
+    transform:translateX(4px);
+}
+
+.quick-item::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:60%;
+    height:100%;
+    background:linear-gradient(120deg,transparent,rgba(255,255,255,.18),transparent);
+    transition:.7s;
+}
+
+.quick-item:hover::before{
+    left:150%;
+}
+
+.quick-red{background:#D51F45;}
+.quick-blue{background:#005FD7;}
+.quick-green{background:#00A5A5;}
+.quick-orange{background:#D77700;}
+
+/* =========================
+   Footer
+========================= */
+
+.intro-footer{margin-top:78px;padding:28px 40px;background:#071B4D;}
+.footer-inner{max-width:1700px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+.footer-info{display:flex;align-items:center;gap:25px;}
+.footer-info img{height:42px;}
+.footer-text{    display: flex;flex-direction: row; gap: 6px; align-items: center;}
+.footer-address{font-size:17px;color:#fff;}
+.copyright{font-size:15px;color:#fff;opacity:.9;}
+.footer-sns{display:flex;gap:15px;}
+.footer-sns img{width:34px;transition:.25s;}
+.footer-sns img:hover{transform:scale(1.1);}
+
+/* =========================
+   Responsive
+========================= */
+/*==============================Responsive==============================*/
+@media(max-width:1600px){
+    .header-inner{padding:0 35px;}
+    .logo img{height:46px;}
+    #gnb{margin-left:60px;}
+    #gnb ul{gap:50px;}
+    #gnb a{font-size:19px;}
+    .intro-container{padding:35px 35px 20px;}
+    .intro-layout{grid-template-columns:300px 1fr 300px;gap:26px;}
+    .admission-box{padding:35px;}
+    .admission-box h2{font-size:38px;}
+    .admission-date strong{font-size:26px;}
+    .admission-date span{font-size:18px;}
+    .video-box{min-height:590px;}
+    .quick-item{height:122px;padding:0 22px;}
+    .quick-icon{width:58px;height:58px;}
+    .quick-icon img{width:40px;}
+    .quick-content strong{font-size:19px;}
+    .quick-arrow{width:40px;height:40px;font-size:22px;}
+    .intro-footer{padding:30px 35px;}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-direction: column;}
+    .footer-info{display:flex;align-items:center;gap:22px;}
+    .footer-info img{height:40px;}
+    .footer-address{font-size:15px;}
+    .copyright{font-size:13px;}
+    .footer-sns img{width:32px; margin-top: 10px;}
+    }
+    @media(max-width:1200px){
+        .header-inner{padding:0 30px;}
+        .logo img{height:44px;}
+        #gnb{margin-left:50px;}
+        #gnb ul{gap:40px;}
+        #gnb a{font-size:18px;}
+        .intro-container{padding:30px;}
+        .intro-layout{grid-template-columns:280px 1fr 280px;gap:24px;}
+        .admission-box{padding:30px;}
+        .admission-box h2{font-size:34px;line-height:1.25;}
+        .admission-date{margin:18px 0;}
+        .admission-date strong{font-size:24px;}
+        .admission-date span{font-size:17px;}
+        .btn-intro{height:56px;font-size:19px;}
+        .video-box{min-height:560px;}
+        .quick-item{height:115px;padding:0 20px;}
+        .quick-content strong{font-size:18px;line-height:1.3;}
+        .intro-footer{padding:28px 30px;}
+        .footer-address{font-size:14px;}
+        .copyright{font-size:13px;}
+        }
+    
+    @media(max-width:992px){
+        .main-top{height:82px;}
+        .header-inner{padding:0 25px;}
+        .logo img{height:42px;}
+        #gnb{margin-left:40px;}
+        #gnb ul{gap:35px;}
+        #gnb a{font-size:18px;}
+        .intro-container{padding:25px;}
+        .intro-layout{display:grid;grid-template-columns:320px 1fr;grid-template-areas:"ipsi youtu""qmenu qmenu";gap:24px;}
+        .ipsi{grid-area:ipsi;}
+        .youtu{grid-area:youtu;}
+        .qmenu{grid-area:qmenu;}
+        .admission-box{padding:32px;min-height:auto;}
+        .admission-box h2{font-size:34px;}
+        .video-box{min-height:500px;}
+        .quick-box{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+        .quick-item{height:110px;padding:0 22px;}
+        .intro-footer{padding:26px 25px;}
+        .footer-info{flex-direction:column;text-align:center;gap:14px;}
+        .footer-info img{height:36px;}
+        .footer-sns img{width:30px; margin-top: 10px;}
+        }
+
+        @media(max-width:768px){
+            .main-top{height:72px;}
+            .header-inner{padding:0 20px;}
+            .logo img{height:38px;}
+            #gnb{margin-left:30px;}
+            #gnb ul{gap:24px;}
+            #gnb a{font-size:17px;}
+            .intro-container{padding:20px;}
+            .intro-layout{display:flex;flex-direction:column;gap:20px;}
+            .admission-box{padding:30px;}
+            .admission-date{margin:15px 0;}
+            .admission-date strong{font-size:22px;}
+            .btn-intro{height:54px;font-size:18px;}
+            .quick-box{grid-template-columns:1fr 1fr;gap:16px;}
+            .quick-item{height:95px;padding:0 18px;}
+            .quick-content strong{font-size:17px;}
+            .intro-footer{padding:24px 20px;}
+            .footer-info{flex-direction:column;text-align:center;gap:12px;}
+            .footer-info img{height:34px;}
+            .footer-address{font-size:13px;}
+            .copyright{font-size:12px;}
+            .footer-sns img{width:30px; margin-top: 10px;}
+            }
+    
+        @media(max-width:480px){
+            .main-top{height:68px;}
+            .header-inner{padding:0 12px;}
+            .logo img{height:32px;}
+            #gnb{margin-left:18px;}
+            #gnb ul{gap:16px;}
+            #gnb a{font-size:15px;}
+            .intro-container{padding:12px;}
+            .intro-layout{gap:16px;}
+            .admission-box{padding:24px;border-radius:18px;}
+            .admission-box h2{font-size:32px;line-height:1.2;text-align:center;}
+            .admission-date{margin:0;text-align:center;}
+            .admission-date strong{font-size:20px;}
+            .admission-date span{font-size:15px;line-height:1.6;}
+            .btn-intro{height:50px;font-size:17px;margin-top:10px;}
+            .video-box{min-height:25vh;border-radius:18px;}
+            .quick-box{display:flex;flex-direction:column;gap:12px;}
+            .quick-item{height:72px;padding:0 18px;border-radius:16px;}
+            .quick-content strong{font-size:15px;}
+            .intro-footer{padding:22px 12px; margin-top: 17px;}
+            .footer-info img{height:30px;}
+            .footer-address{font-size:11px;line-height:1.6;}
+            .copyright{font-size:10px;line-height:1.6;}
+            .footer-sns img{width:26px; margin-top: 10px;}
+            }
