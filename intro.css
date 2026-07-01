@@ -1,6 +1,10 @@
 /* =========================
    Intro Layout
 ========================= */
+html,
+body{
+overflow-x:hidden;
+}
 body.intro{
     margin:0;
     background:#fff;
